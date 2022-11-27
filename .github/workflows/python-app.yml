@@ -37,6 +37,8 @@ jobs:
   lint:
 
     runs-on: ubuntu-latest
+    concurrency:
+      group: some-group-name
     defaults:
       run:
         working-directory: ./example-app
@@ -62,6 +64,8 @@ jobs:
   formatter:
 
     runs-on: ubuntu-latest
+    concurrency:
+      group: some-group-name
     defaults:
       run:
         working-directory: ./example-app
@@ -88,6 +92,8 @@ jobs:
   security:
 
     runs-on: ubuntu-latest
+    concurrency:
+      group: some-group-name
     defaults:
       run:
         working-directory: ./example-app
